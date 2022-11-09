@@ -28,8 +28,8 @@ def slice_IMG(input_image):
 We get the mean R,G,B values for all the slices in the input image
 """
 
-def mean_RGB(tile):
-   meanBGR = np.mean(tile, axis = 0)
+def mean_RGB(yLine):
+   meanBGR = np.mean(yLine, axis = 0)
    mean_meanBGR = np.mean(meanBGR, axis = 0)
    return mean_meanBGR
 
