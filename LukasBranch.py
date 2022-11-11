@@ -28,8 +28,8 @@ def slice_IMG(input_image):
 We get the mean R,G,B values for all the slices in the input image
 """
 
-def mean_RGB(yLine):
-   meanBGR = np.mean(yLine, axis = 0)
+def mean_RGB(tile):
+   meanBGR = np.mean(tile, axis = 0)
    mean_meanBGR = np.mean(meanBGR, axis = 0)
    return mean_meanBGR
 
@@ -59,6 +59,7 @@ dirtLand = 6
 
 
 """
+Before the grassfire we need to make the image binary. 
 We need a grassfire function to check how many similar fields lie close to each other and assigns points accordingly
 """
 
