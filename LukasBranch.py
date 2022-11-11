@@ -59,7 +59,6 @@ dirtLand = 6
 
 
 """
-Before the grassfire we need to make the image binary. 
 We need a grassfire function to check how many similar fields lie close to each other and assigns points accordingly
 """
 
