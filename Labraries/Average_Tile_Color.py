@@ -5,7 +5,6 @@ import cv2 as cv
 Slice_IMG makes 5 times 5 slices of the input image
 """
 
-
 def slice_IMG(input_image):
     output = []
     for y in range(0, input_image.shape[0], int(input_image.shape[0] / 5)):
@@ -36,18 +35,22 @@ def get_dominant_colour(tile):
     return tile_colors
 
 
-def set_tile_color(colors):
+def set_tile_color(tile_colors):
     matrix1D = np.zeros((25, 1, 3), dtype=np.uint8)
 
     for i in range(len(matrix1D)):
-        matrix1D[i, 0, 0] = colors[i][0]
-        matrix1D[i, 0, 1] = colors[i][1]
-        matrix1D[i, 0, 2] = colors[i][2]
+        matrix1D[i, 0, 0] = tile_colors[i][0]
+        matrix1D[i, 0, 1] = tile_colors[i][1]
+        matrix1D[i, 0, 2] = tile_colors[i][2]
+
+# Getting list with hsv for tiles
+    output = []
+    tile_colors_to_hsv = cv.cvtColor(matrix1D, cv.COLOR_BGR2HSV)
+    print(tile_colors_to_hsv)
 
     matrix2D = np.reshape(matrix1D, (5, 5, 3))
 
     return matrix2D
-
 
 """
 Creating custom image the same size as input image, which is 5 times 5 + 2 in each row 

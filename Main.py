@@ -35,6 +35,7 @@ Tile_Threshold.tile_threshold(combined_tiles)
 
 print(tiles_dominant_color)
 
+
 cv2.imshow("combined tiles", combined_tiles)
 #cv2.imshow("average_color", tiles_average_color[])
 cv2.imshow("image", image)
