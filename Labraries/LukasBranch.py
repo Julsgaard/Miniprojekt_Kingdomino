@@ -9,7 +9,7 @@ from collections import deque
 Loading input image
 """
 
-input_image = cv.imread("20.jpg")
+input_image = cv.imread("../King Domino dataset/Cropped and perspective corrected boards/20.jpg")
 
 """
 Slice_IMG makes 5 times 5 slices of the input image
@@ -61,6 +61,7 @@ Desert = 4
 grassLand = 5
 woodLand = 6
 dirtLand = 7
+
 
 """
 We need a grassfire function to check how many similar fields lie close to each other and assigns points accordingly
@@ -116,8 +117,9 @@ tile = slice_IMG(input_image)
 tileBGR_average = average_RGB(tile)
 print(tileBGR_average)
 cv.imshow('output_image', tile[0][0])
-cv.imshow('20.jpg', input_image)
 cv.waitKey(0)
+
+
 
 
 

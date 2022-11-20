@@ -1,9 +1,6 @@
 import cv2
 
-import Average_Tile_Color
-import Crown_Tile
-import Find_Crowns
-import Non_Max_Suppression
+from Labraries import Non_Max_Suppression, Average_Tile_Color, Find_Crowns, Tile_Threshold
 
 image = cv2.imread("King Domino dataset/Cropped and perspective corrected boards/20.jpg")
 
@@ -34,9 +31,13 @@ tiles_dominant_color = Average_Tile_Color.get_dominant_colour(tiles)
 
 combined_tiles = Average_Tile_Color.set_tile_color(tiles_dominant_color)
 
+Tile_Threshold.tile_threshold(combined_tiles)
+
+print(tiles_dominant_color)
+
 cv2.imshow("combined tiles", combined_tiles)
 #cv2.imshow("average_color", tiles_average_color[])
 cv2.imshow("image", image)
-cv2.imshow("box_center_coordinates", box_coordinates_image)
-cv2.imshow("box_image", box_image)
+#cv2.imshow("box_center_coordinates", box_coordinates_image)
+#cv2.imshow("box_image", box_image)
 cv2.waitKey(0)

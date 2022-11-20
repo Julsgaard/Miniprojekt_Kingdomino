@@ -4,11 +4,10 @@ import cv2
 
 #TODO: Make a template list with more templates so the template matching is more accurate
 
-template_up = cv2.imread("Crown_up.png")
-template_down = cv2.imread("Crown_down.png")
-template_right = cv2.imread("Crown_right.png")
-template_left = cv2.imread("Crown_left.png")
-
+template_up = cv2.imread('Templates/Crown_up.png')
+template_down = cv2.imread('Templates/Crown_down.png')
+template_right = cv2.imread('Templates/Crown_right.png')
+template_left = cv2.imread('Templates/Crown_left.png')
 
 def template_matching(image):
     template_match_up = cv2.matchTemplate(image, template_up, cv2.TM_CCOEFF_NORMED)

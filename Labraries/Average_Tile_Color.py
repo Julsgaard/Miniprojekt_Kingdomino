@@ -17,19 +17,7 @@ def slice_IMG(input_image):
     return output
 
 
-"""
-We get the mean R,G,B values for all the slices in the input image
-"""
-
-
-# Forstår ikke hvad den gør
-def average_RGB(tile):
-    averageBGR = np.average(tile, axis=0)
-    average_averageBGR = np.average(averageBGR, axis=0)
-
-    return average_averageBGR
-
-
+#TODO: Make simpler
 def get_dominant_colour(tile):
     tile_colors = []
     for i in range(len(tile)):
@@ -59,8 +47,6 @@ def set_tile_color(colors):
     matrix2D = np.reshape(matrix1D, (5, 5, 3))
 
     return matrix2D
-
-
 
 
 """
