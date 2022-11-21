@@ -15,10 +15,10 @@ def template_matching(image):
     template_match_right = cv2.matchTemplate(image, template_right, cv2.TM_CCOEFF_NORMED)
     template_match_left = cv2.matchTemplate(image, template_left, cv2.TM_CCOEFF_NORMED)
 
-    ret, output_up = cv2.threshold(template_match_up, 0.6, 1, cv2.THRESH_BINARY)
-    ret, output_down = cv2.threshold(template_match_down, 0.6, 1, cv2.THRESH_BINARY)
-    ret, output_right = cv2.threshold(template_match_right, 0.6, 1, cv2.THRESH_BINARY)
-    ret, output_left = cv2.threshold(template_match_left, 0.5, 1, cv2.THRESH_BINARY)
+    ret, output_up = cv2.threshold(template_match_up, 0.55, 1, cv2.THRESH_BINARY)
+    ret, output_down = cv2.threshold(template_match_down, 0.55, 1, cv2.THRESH_BINARY)
+    ret, output_right = cv2.threshold(template_match_right, 0.55, 1, cv2.THRESH_BINARY)
+    ret, output_left = cv2.threshold(template_match_left, 0.55, 1, cv2.THRESH_BINARY)
 
     output1 = output_up + output_down
     output2 = output_right + output_left

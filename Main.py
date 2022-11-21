@@ -24,8 +24,8 @@ crown_tile = Crown_Tile.find_crown_tile(box_center_coordinates, image.shape[0], 
 tiles = Average_Tile_Color.slice_img(image)
 
 #AVERAGE OR MEDIAN ONLY RUN ONE
-blue_list, green_list, red_list = Average_Tile_Color.get_average_color(tiles)
-#blue_list, green_list, red_list = Average_Tile_Color.get_median_color(tiles)
+#blue_list, green_list, red_list = Average_Tile_Color.get_average_color(tiles)
+blue_list, green_list, red_list = Average_Tile_Color.get_median_color(tiles)
 
 
 combined_tiles = Average_Tile_Color.set_tile_color(blue_list, green_list, red_list)

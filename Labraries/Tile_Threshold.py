@@ -13,12 +13,12 @@ def tile_threshold(combined_tiles):
     #TODO: Make it so that 60/2 is high_H/2 and 65*2.55 is high_S*2.55 and 35.1*2.55 is high_V*2.55 and so on.
 
 
-    thresh_grass = cv.inRange(combined_tiles_HSV, ( 60/2, 65*2.55, 35.1*2.55), (95/2, 90*2.55, 70*2.55)) #Hue 0-180, Saturation 0-255, Value 0-255
-    thresh_woods = cv.inRange(combined_tiles_HSV, ( 65/2, 40*2.55, 0*2.55), (90/2, 90*2.55, 35*2.55))
-    thresh_water = cv.inRange(combined_tiles_HSV, ( 195/2, 45*2.55, 35*2.55), (220/2, 110*2.55, 80*2.55))
-    thresh_desert = cv.inRange(combined_tiles_HSV, ( 40/2, 85*2.55, 50*2.55), (60/2, 105*2.55, 85*2.55))
-    thresh_dirt = cv.inRange(combined_tiles_HSV, ( 40/2, 35*2.55, 30*2.55), (52/2, 59*2.55, 55*2.55))
-    thresh_mine = cv.inRange(combined_tiles_HSV, ( 40/2, 40*2.55, 18*2.55), (70/2, 70*2.55, 36.9*2.55))
+    thresh_grass = cv.inRange(combined_tiles_HSV, ( 65/2, 75*2.55, 50.1*2.55), (90/2, 100*2.55, 70*2.55)) #Hue 0-180, Saturation 0-255, Value 0-255
+    thresh_woods = cv.inRange(combined_tiles_HSV, ( 65/2, 44*2.55, 15*2.55), (100/2, 85*2.55, 35*2.55))
+    thresh_water = cv.inRange(combined_tiles_HSV, ( 195/2, 85*2.55, 40*2.55), (220/2, 105*2.55, 80*2.55))
+    thresh_desert = cv.inRange(combined_tiles_HSV, ( 40/2, 85*2.55, 65*2.55), (60/2, 105*2.55, 90*2.55))
+    thresh_dirt = cv.inRange(combined_tiles_HSV, ( 40/2, 25*2.55, 30*2.55), (55/2, 70*2.55, 60*2.55))
+    thresh_mine = cv.inRange(combined_tiles_HSV, ( 25/2, 20*2.55, 10*2.55), (55/2, 70*2.55, 30*2.55))
 
     cv.imshow("thresh_grass", thresh_grass)
     cv.imshow("thresh_woods", thresh_woods)

@@ -1,0 +1,107 @@
+Reference Points:
+
+Billede 1: 
+points_grass: 20.0
+points_woods: 7.0
+points_water: 3.0
+points_desert: 0.0
+points_dirt: 6.0
+points_mine: 0
+Crown tiles: 
+ [[0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0.]
+ [0. 1. 0. 0. 0.]
+ [0. 2. 0. 2. 1.]
+ [0. 1. 0. 1. 0.]]
+Total Points: 36.0
+
+Billede 2:
+points_grass: 0.0
+points_woods: 0.0
+points_water: 0
+points_desert: 6.0
+points_dirt: 3.0
+points_mine: 34.0
+Crown tiles: 
+ [[0. 0. 0. 2. 0.]
+ [1. 1. 0. 0. 0.]
+ [2. 0. 0. 0. 0.]
+ [2. 3. 0. 0. 1.]
+ [0. 0. 0. 0. 0.]]
+Total Points: 43.0
+
+Billede 3:
+points_grass: 0
+points_woods: 33.0
+points_water: 9.0
+points_desert: 8.0
+points_dirt: 2.0
+points_mine: 0.0
+Crown tiles: 
+ [[2. 1. 0. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 1. 0. 0. 1.]
+ [0. 1. 0. 1. 0.]
+ [0. 0. 1. 0. 1.]]
+Total Points: 52.0
+
+Billede 4:
+points_grass: 4.0
+points_woods: 4.0
+points_water: 12.0
+points_desert: 22
+points_dirt: 0.0
+points_mine: 0
+Crown tiles: 
+ [[1. 0. 1. 0. 0.]
+ [0. 1. 2. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [1. 0. 0. 1. 1.]
+ [0. 0. 0. 0. 0.]]
+Total Points: 42.0
+
+Billede 5:
+points_grass: 20.0
+points_woods: 7.0
+points_water: 3.0
+points_desert: 0.0
+points_dirt: 6.0
+points_mine: 0
+Crown tiles: 
+ [[0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0.]
+ [0. 1. 0. 0. 0.]
+ [0. 2. 0. 2. 1.]
+ [0. 1. 0. 1. 0.]]
+Total Points: 36.0
+
+Billede 6:
+points_grass: 0.0
+points_woods: 0.0
+points_water: 0
+points_desert: 6.0
+points_dirt: 3.0
+points_mine: 34.0
+Crown tiles: 
+ [[0. 0. 0. 2. 0.]
+ [1. 1. 0. 0. 0.]
+ [2. 0. 0. 0. 0.]
+ [2. 3. 0. 0. 1.]
+ [0. 0. 0. 0. 0.]]
+Total Points: 43.0
+
+Billede 7:
+points_grass: 0
+points_woods: 22.0
+points_water: 9.0
+points_desert: 8.0
+points_dirt: 2.0
+points_mine: 0.0
+Crown tiles: 
+ [[2. 1. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 1.]
+ [0. 1. 0. 1. 0.]
+ [0. 0. 1. 0. 1.]]
+Total Points: 41.0
+

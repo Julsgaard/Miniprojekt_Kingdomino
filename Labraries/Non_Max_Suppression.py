@@ -68,8 +68,8 @@ def get_box_center(boxes):
     newBoxes = np.zeros(boxes.shape)
 
     for i in range(len(boxes)):
-        newBoxes[i, 0] = boxes[i, 2] - 23.5  # 13 er template width, så ved at minus med halvdelen får vi centret
-        newBoxes[i, 1] = boxes[i, 3] - 23.5  # 13 er også template height, så her minuser vi også med halvdelen
+        newBoxes[i, 0] = boxes[i, 2] - 23.5  # 23.5 er ca. template width, så ved at minus med halvdelen får vi centret
+        newBoxes[i, 1] = boxes[i, 3] - 23.5  # 23.5 er ca. template height, så her minuser vi også med halvdelen
 
     # Slicer så vi kun har 2 columns - 1 for x og 1 for y
     box_center_coordinates = newBoxes[:, :2]
