@@ -43,6 +43,45 @@ def get_average_color(tile_colors):
 
     return blue_list, green_list, red_list
 
+def get_median_color(tile_colors):
+    blue_median_list = []
+    green_median_list = []
+    red_median_list = []
+
+    for i in range(len(tile_colors)):
+        blue_list = []
+        green_list = []
+        red_list = []
+
+        width, height = tile_colors[i].shape[0], tile_colors[i].shape[1]
+
+        for x in range(width):
+            for y in range(height):
+                # print(f"{x},{y}")
+                blue = tile_colors[i][x, y, 0]
+                green = tile_colors[i][x, y, 1]
+                red = tile_colors[i][x, y, 2]
+
+                blue_list.append(blue)
+                green_list.append(green)
+                red_list.append(red)
+
+        blue_list.sort()
+        green_list.sort()
+        red_list.sort()
+
+        blue_median = np.median(blue_list)
+        green_median = np.median(green_list)
+        red_median = np.median(red_list)
+
+        blue_median_list.append(blue_median)
+        green_median_list.append(green_median)
+        red_median_list.append(red_median)
+
+    print(f"blue_median LIST: {blue_median_list}")
+
+    return blue_median_list, green_median_list, red_median_list
+
 
 def set_tile_color(blue_list, green_list, red_list):
     matrix = np.zeros((25, 1, 3), dtype=np.uint8)

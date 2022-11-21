@@ -23,8 +23,10 @@ crown_tile = Crown_Tile.find_crown_tile(box_center_coordinates, image.shape[0], 
 #Slices the image into 25 pieces
 tiles = Average_Tile_Color.slice_img(image)
 
-# TODO: Maybe get median rgb instead of average
+#AVERAGE OR MEDIAN ONLY RUN ONE
 blue_list, green_list, red_list = Average_Tile_Color.get_average_color(tiles)
+#blue_list, green_list, red_list = Average_Tile_Color.get_median_color(tiles)
+
 
 combined_tiles = Average_Tile_Color.set_tile_color(blue_list, green_list, red_list)
 
