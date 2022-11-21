@@ -1,6 +1,6 @@
 import cv2
 
-from Labraries import Non_Max_Suppression, Average_Tile_Color, Find_Crowns, Tile_Threshold
+from Labraries import Non_Max_Suppression, Average_Tile_Color, Find_Crowns, Tile_Threshold, Connect_Tiles, Crown_Tile, Count_Points
 
 image = cv2.imread("King Domino dataset/Cropped and perspective corrected boards/20.jpg")
 
@@ -17,28 +17,49 @@ box_center_coordinates = Non_Max_Suppression.get_box_center(NMS_Boxes)
 #Drawing the center coordinates on a black image
 box_coordinates_image, box_image = Non_Max_Suppression.draw_box_coordinates(image, box_center_coordinates)
 
-#TODO: Få de tiles der er kroner på
-#crown_tile = Crown_Tile.find_crown_tile(box_center_coordinates, image.shape[0], image.shape[1])
-
-# print(f"Crowns in the image: {box_center_coordinates.shape[0]}")
-# print(f"Crown coordinates: \n {box_center_coordinates}")
-# print(f"Crown Tiles: \n {crown_tile}")
+#Converts the crown coordinates to a 5x5 numpy array
+crown_tile = Crown_Tile.find_crown_tile(box_center_coordinates, image.shape[0], image.shape[1])
 
 
 tiles = Average_Tile_Color.slice_IMG(image)
 
+#TODO: Get this one to work as a numpy array
+#tiles = Average_Tile_Color.slice_img(image)
+
+
+#TODO: Simpler version of get_dominant_colour
+#TODO: Maybe get median rgb instead of average
+
 tiles_dominant_color = Average_Tile_Color.get_dominant_colour(tiles)
+
+#Average_Tile_Color.get_average_color(tiles)
+
 
 combined_tiles = Average_Tile_Color.set_tile_color(tiles_dominant_color)
 
-Tile_Threshold.tile_threshold(combined_tiles)
+thresh_grass, thresh_woods, thresh_water, thresh_desert, thresh_dirt, thresh_mine = \
+    Tile_Threshold.tile_threshold(combined_tiles)
 
-print(tiles_dominant_color)
+connected_grass, connected_woods, connected_water, connected_desert, connected_dirt, connected_mine = \
+    Connect_Tiles.connect_tile(thresh_grass, thresh_woods, thresh_water, thresh_desert, thresh_dirt, thresh_mine)
 
+
+total_points = Count_Points.connected_terrains\
+    (crown_tile, connected_grass, connected_woods, connected_water, connected_desert, connected_dirt, connected_mine)
+
+#Count_Points.count_points()
+
+#print(tiles_dominant_color)
+
+print(f"Crown tiles: \n {crown_tile}")
+
+print(f"Total Points: {total_points}")
 
 cv2.imshow("combined tiles", combined_tiles)
+#cv2.imshow("tile", tiles[0][0])
 #cv2.imshow("average_color", tiles_average_color[])
 cv2.imshow("image", image)
 #cv2.imshow("box_center_coordinates", box_coordinates_image)
 #cv2.imshow("box_image", box_image)
 cv2.waitKey(0)
+

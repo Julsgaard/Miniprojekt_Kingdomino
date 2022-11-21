@@ -9,8 +9,8 @@ def tile_threshold(combined_tiles):
 
     #Hue er divideret med 2 er pga vi har fundet dem via paint.net, som viser hue fra 0-360, men CV2 vil hellere have det fra 0-180
     #Saturation og value er ganget med 2.55 pga paint.net viser fra 0-100 men cv2 vil gerne have det fra 0-255
-    # TODO: Make it so that 60/2 is low_H/2 and 65*2.55 is low_S*2.55 and 35.1*2.55 is low_V*2.55 and so on.
-    # TODO: Make it so that 60/2 is high_H/2 and 65*2.55 is high_S*2.55 and 35.1*2.55 is high_V*2.55 and so on.
+    #TODO: Make it so that 60/2 is low_H/2 and 65*2.55 is low_S*2.55 and 35.1*2.55 is low_V*2.55 and so on.
+    #TODO: Make it so that 60/2 is high_H/2 and 65*2.55 is high_S*2.55 and 35.1*2.55 is high_V*2.55 and so on.
 
 
     thresh_grass = cv.inRange(combined_tiles_HSV, ( 60/2, 65*2.55, 35.1*2.55), (95/2, 90*2.55, 70*2.55)) #Hue 0-180, Saturation 0-255, Value 0-255
@@ -28,6 +28,9 @@ def tile_threshold(combined_tiles):
     cv.imshow("thresh_mine", thresh_mine)
 
     #cv.waitKey(0)
+
+    return thresh_grass, thresh_woods, thresh_water, thresh_desert, thresh_dirt, thresh_mine
+
 
 
 """

@@ -1,17 +1,21 @@
 import numpy as np
 
-def find_crown_tile(box_coordinates_image, image_shape_x, image_shape_y):
-    crown_tile = np.zeros(box_coordinates_image.shape)
 
-    for i in range(len(box_coordinates_image)):
-        box_tile_x = image_shape_x / box_coordinates_image[i][0]
-        box_tile_y = image_shape_y / box_coordinates_image[i][1]
+def find_crown_tile(box_center_coordinates, image_shape_x, image_shape_y):
+    crown_tile_matrix = np.zeros((5, 5))
 
-        crown_tile[i, 0] = box_tile_x
-        crown_tile[i, 1] = box_tile_y
+    # The pixel length between each tile when there are 5x5 tiles
+    tile_pixel_length_x = image_shape_x / 5
+    tile_pixel_length_y = image_shape_y / 5
 
-    #crown_tile = crown_tile.astype(int)
+    # Loop goes through every crown coordinate
+    for i in range(len(box_center_coordinates)):
+        crown_tile_x = box_center_coordinates[i][0] / tile_pixel_length_x
+        crown_tile_y = box_center_coordinates[i][1] / tile_pixel_length_y
 
-    print(f"Tile: \n {crown_tile}")
+        crown_tile_x = int(crown_tile_x)
+        crown_tile_y = int(crown_tile_y)
 
-    #return crown_tile
+        crown_tile_matrix[crown_tile_y][crown_tile_x] += 1
+
+    return crown_tile_matrix
