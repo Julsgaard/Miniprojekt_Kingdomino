@@ -65,11 +65,14 @@ def non_max_suppression(boxes, probs=None, overlapThresh=0.3):
 
 
 def get_box_center(boxes):
+    if len(boxes) == 0:
+        return []
+
     newBoxes = np.zeros(boxes.shape)
 
     for i in range(len(boxes)):
-        newBoxes[i, 0] = boxes[i, 2] - 23.5  # 23.5 er ca. template width, så ved at minus med halvdelen får vi centret
-        newBoxes[i, 1] = boxes[i, 3] - 23.5  # 23.5 er ca. template height, så her minuser vi også med halvdelen
+        newBoxes[i, 0] = boxes[i, 2] - 11  # 11 is almost half of the template width
+        newBoxes[i, 1] = boxes[i, 3] - 11  # 11 is almost half of the template height
 
     # Slicer så vi kun har 2 columns - 1 for x og 1 for y
     box_center_coordinates = newBoxes[:, :2]
@@ -79,6 +82,9 @@ def get_box_center(boxes):
 
 
 def draw_box_coordinates(image, boxes):
+    if len(boxes) == 0:
+        return [], []
+
     #Making a numpy array with zeros, same size as the image
     box_coordinates_image = np.zeros(image.shape)
     # print(boxes.shape)
@@ -92,16 +98,7 @@ def draw_box_coordinates(image, boxes):
         box_coordinates_image[int(x[1]), int(x[0])] = 1
 
         #Draw boxes on image
-        box_image = cv2.rectangle(new_image, (int(x[0]) + 24, int(x[1]) + 24), (int(x[0]) - 2, int(x[1]) - 2),
+        box_image = cv2.rectangle(new_image, (int(x[0]) + 14, int(x[1]) + 14), (int(x[0]) - 14, int(x[1]) - 14),
                                   (255, 255, 255), 2)
 
     return box_coordinates_image, box_image
-
-
-def draw_box_img(img, boxes):
-    for x in boxes:
-        # print(f"x:{x}")
-        box_image = cv2.rectangle\
-            (img, (int(x[0]) + 13, int(x[1]) + 13), (int(x[0]) - 13, int(x[1]) - 13), (0, 255, 0), 3)
-
-    return box_image

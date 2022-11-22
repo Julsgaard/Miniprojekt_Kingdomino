@@ -2,6 +2,9 @@ import numpy as np
 
 
 def find_crown_tile(box_center_coordinates, image_shape_x, image_shape_y):
+    if len(box_center_coordinates) == 0:
+        return np.zeros((5, 5))
+
     crown_tile_matrix = np.zeros((5, 5))
 
     # The pixel length between each tile when there are 5x5 tiles

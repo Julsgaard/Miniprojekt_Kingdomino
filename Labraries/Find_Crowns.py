@@ -1,50 +1,69 @@
 import numpy as np
-import cv2
+import cv2 as cv
+import os
 
 
-#TODO: Make a template list with more templates so the template matching is more accurate
+def load_images_from_folder(folder):
+    templates = []
+    for filename in os.listdir(folder):
+        img = cv.imread(os.path.join(folder, filename))
+        if img is not None:
+            templates.append(img)
+    return templates
 
-template_up = cv2.imread('Templates/Crown_up.png')
-template_down = cv2.imread('Templates/Crown_down.png')
-template_right = cv2.imread('Templates/Crown_right.png')
-template_left = cv2.imread('Templates/Crown_left.png')
 
-def template_matching(image):
-    template_match_up = cv2.matchTemplate(image, template_up, cv2.TM_CCOEFF_NORMED)
-    template_match_down = cv2.matchTemplate(image, template_down, cv2.TM_CCOEFF_NORMED)
-    template_match_right = cv2.matchTemplate(image, template_right, cv2.TM_CCOEFF_NORMED)
-    template_match_left = cv2.matchTemplate(image, template_left, cv2.TM_CCOEFF_NORMED)
+def template_matching(image, templates):
+    constant_list = []
 
-    ret, output_up = cv2.threshold(template_match_up, 0.55, 1, cv2.THRESH_BINARY)
-    ret, output_down = cv2.threshold(template_match_down, 0.55, 1, cv2.THRESH_BINARY)
-    ret, output_right = cv2.threshold(template_match_right, 0.55, 1, cv2.THRESH_BINARY)
-    ret, output_left = cv2.threshold(template_match_left, 0.55, 1, cv2.THRESH_BINARY)
+    for i in range(len(templates)):
+        template = cv.matchTemplate(image, templates[i], cv.TM_CCOEFF_NORMED)
 
-    output1 = output_up + output_down
-    output2 = output_right + output_left
+        ret, threshold = cv.threshold(template, 0.56, 1, cv.THRESH_BINARY)
 
-    (template_up_down_width, template_up_down_height) = template_up.shape[:2]
-    template_up_down_width = int(template_up_down_width / 2)
-    template_up_down_height = int(template_up_down_height / 2)
+        template_width, template_height = templates[i].shape[:2]
 
-    (template_left_right_width, template_left_right_height) = template_up.shape[:2]
-    template_left_right_width = int(template_left_right_width / 2)
-    template_left_right_height = int(template_left_right_height / 2)
+        template_width = template_width / 2
+        template_height = template_height / 2
 
-    constant_up_down = cv2.copyMakeBorder(output1, template_up_down_width, template_up_down_width - 1,
-                                          template_up_down_height, template_up_down_height,
-                                          cv2.BORDER_CONSTANT, value=[0, 0, 0])
+        template_width_int = int(template_width)
+        template_height_int = int(template_height)
 
-    constant_left_right = cv2.copyMakeBorder(output2, template_left_right_height, template_left_right_height,
-                                             template_left_right_width,
-                                             template_left_right_width - 1, cv2.BORDER_CONSTANT, value=[0, 0, 0])
+        # To get a 500x500 array - The template can be any pixel size fx. (24,25), (25,24), (24,24) or (25,25)
+        if template_width.is_integer() and not template_height.is_integer():
+            constant = cv.copyMakeBorder(threshold, template_width_int, template_width_int - 1, template_height_int,
+                                         template_height_int, cv.BORDER_CONSTANT, value=[0, 0, 0])
 
-    output = constant_up_down + constant_left_right
+        elif template_height.is_integer() and not template_width.is_integer():
+            constant = cv.copyMakeBorder(threshold, template_width_int, template_width_int, template_height_int,
+                                         template_height_int - 1, cv.BORDER_CONSTANT, value=[0, 0, 0])
 
-    (y1, x1) = np.where(output >= 0.45)  # object is detected, where the correlation is above the treshold
+        elif template_height.is_integer() and template_width.is_integer():
+            constant = cv.copyMakeBorder(threshold, template_width_int, template_width_int - 1, template_height_int,
+                                         template_height_int - 1, cv.BORDER_CONSTANT, value=[0, 0, 0])
+        else:
+            constant = cv.copyMakeBorder(threshold, template_width_int, template_width_int, template_height_int,
+                                         template_height_int, cv.BORDER_CONSTANT, value=[0, 0, 0])
+
+        # For testing
+        # print(constant.shape)
+        # print(template_width, template_height)
+        # cv.imshow("threshold", threshold)
+        # cv.imshow("template", template)
+        # cv.waitKey(0)
+
+        constant_list.append(constant)
+
+    constants = 0
+    for i in range(len(constant_list)):
+        constants += constant_list[i]
+
+    (y1, x1) = np.where(constants >= 0.45)  # object is detected, where the correlation is above the treshold
+
     boxes = np.zeros((len(y1), 4))  # construct array of zeros
-    x2 = x1 + template_left_right_height  # calculate x2 with the width of the template
-    y2 = y1 + template_up_down_height  # calculate y2 with the height of the template
+
+    x2 = x1 + 12
+    y2 = y1 + 12
+
     # fill the bounding boxes array
     boxes[:, 0] = x1
     boxes[:, 1] = y1
@@ -52,5 +71,3 @@ def template_matching(image):
     boxes[:, 3] = y2
 
     return boxes.astype(int)
-
-

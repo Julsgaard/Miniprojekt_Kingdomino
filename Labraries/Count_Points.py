@@ -31,7 +31,6 @@ def connected_terrains(crown_tile, connected_grass, connected_woods, connected_w
         # print(f"crowns: {crowns}")
 
         return points
-
     points_grass = count_points(connected_grass)
     points_woods = count_points(connected_woods)
     points_water = count_points(connected_water)
