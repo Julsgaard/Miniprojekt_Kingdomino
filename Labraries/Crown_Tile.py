@@ -1,6 +1,5 @@
 import numpy as np
 
-
 def find_crown_tile(box_center_coordinates, image_shape_x, image_shape_y):
     if len(box_center_coordinates) == 0:
         return np.zeros((5, 5))
@@ -22,3 +21,4 @@ def find_crown_tile(box_center_coordinates, image_shape_x, image_shape_y):
         crown_tile_matrix[crown_tile_y][crown_tile_x] += 1
 
     return crown_tile_matrix
+
