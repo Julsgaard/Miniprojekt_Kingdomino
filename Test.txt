@@ -1,0 +1,703 @@
+TEST IMAGES:
+
+Image 30:
+points_grass: 0
+points_woods: 20.0
+points_water: 27.0
+points_desert: 0.0
+points_dirt: 0
+points_mine: 1.0
+Crown tiles: 
+ [[0. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 1.]
+ [0. 0. 1. 0. 1.]
+ [1. 0. 0. 0. 0.]]
+Total Points: 48.0
+
+Image 31:
+points_grass: 48.0
+points_woods: 12.0
+points_water: 0.0
+points_desert: 7.0
+points_dirt: 0.0
+points_mine: 0
+Crown tiles: 
+ [[0. 0. 0. 0. 0.]
+ [0. 1. 2. 0. 0.]
+ [0. 2. 0. 0. 1.]
+ [1. 0. 0. 1. 0.]
+ [0. 0. 1. 0. 0.]]
+Total Points: 67.0
+NO START TILE FOUND
+
+Image 32:
+points_grass: 0.0
+points_woods: 0.0
+points_water: 0
+points_desert: 7.0
+points_dirt: 48.0
+points_mine: 10.0
+Crown tiles: 
+ [[2. 3. 0. 1. 0.]
+ [0. 2. 0. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [2. 1. 0. 0. 0.]
+ [0. 0. 0. 0. 1.]]
+Total Points: 65.0
+NO START TILE FOUND
+
+Image 33:
+points_grass: 2.0
+points_woods: 0.0
+points_water: 15.0
+points_desert: 4.0
+points_dirt: 0.0
+points_mine: 0
+Crown tiles: 
+ [[2. 0. 1. 0. 1.]
+ [0. 1. 0. 0. 0.]
+ [1. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0.]]
+Total Points: 21.0
+
+
+Image 34:
+points_grass: 4.0
+points_woods: 1.0
+points_water: 0.0
+points_desert: 8.0
+points_dirt: 20.0
+points_mine: 3.0
+Crown tiles: 
+ [[0. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 1.]
+ [0. 2. 0. 0. 0.]
+ [2. 0. 0. 1. 1.]
+ [0. 0. 0. 1. 0.]]
+Total Points: 36.0
+
+Image 35:
+points_grass: 0
+points_woods: 5.0
+points_water: 6.0
+points_desert: 5.0
+points_dirt: 2.0
+points_mine: 28.0
+Crown tiles: 
+ [[1. 0. 0. 0. 0.]
+ [0. 1. 0. 1. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [3. 2. 0. 2. 0.]]
+Total Points: 46.0
+
+Image 36:
+points_grass: 10.0
+points_woods: 32.0
+points_water: 0.0
+points_desert: 8.0
+points_dirt: 1.0
+points_mine: 0
+Crown tiles: 
+ [[0. 1. 0. 0. 1.]
+ [1. 0. 0. 0. 0.]
+ [0. 1. 0. 1. 0.]
+ [0. 1. 1. 0. 0.]
+ [0. 0. 0. 2. 0.]]
+Total Points: 51.0
+
+Image 37:
+points_grass: 2.0
+points_woods: 0.0
+points_water: 15.0
+points_desert: 4.0
+points_dirt: 0.0
+points_mine: 0
+Crown tiles: 
+ [[2. 0. 1. 0. 1.]
+ [0. 1. 0. 0. 0.]
+ [1. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0.]]
+Total Points: 21.0
+NO START TILE FOUND
+
+Image 38: ************************ NOT WORKING (Could not find 2 crowns)***********************
+points_grass: 4.0
+points_woods: 1.0
+points_water: 0.0
+points_desert: 8.0
+points_dirt: 20.0
+points_mine: 1.0
+Crown tiles: 
+ [[0. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 1.]
+ [0. 0. 0. 0. 0.]
+ [2. 0. 0. 1. 1.]
+ [0. 0. 0. 1. 0.]]
+Total Points: 34.0
+
+Image 39:
+points_grass: 0
+points_woods: 5.0
+points_water: 6.0
+points_desert: 5.0
+points_dirt: 2.0
+points_mine: 28.0
+Crown tiles: 
+ [[1. 0. 0. 0. 0.]
+ [0. 1. 0. 1. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [3. 2. 0. 2. 0.]]
+Total Points: 46.0
+NO START TILE FOUND
+
+Image 40: ****************** NOT WORKING (Grass tile too dark) *********************
+points_grass: 0.0
+points_woods: 32.0
+points_water: 0.0
+points_desert: 8.0
+points_dirt: 1.0
+points_mine: 0
+Crown tiles: 
+ [[0. 1. 0. 0. 1.]
+ [1. 0. 0. 0. 0.]
+ [0. 1. 0. 1. 0.]
+ [0. 1. 1. 0. 0.]
+ [0. 0. 0. 2. 0.]]
+Total Points: 41.0
+NO START TILE FOUND
+
+Image 41:
+points_grass: 4.0
+points_woods: 2.0
+points_water: 14.0
+points_desert: 3.0
+points_dirt: 0.0
+points_mine: 10.0
+Crown tiles: 
+ [[0. 0. 1. 0. 1.]
+ [2. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0.]
+ [2. 0. 0. 1. 0.]
+ [3. 0. 0. 0. 0.]]
+Total Points: 33.0
+NO START TILE FOUND
+
+Image 42:
+points_grass: 0
+points_woods: 27.0
+points_water: 6.0
+points_desert: 8.0
+points_dirt: 0.0
+points_mine: 2.0
+Crown tiles: 
+ [[1. 0. 0. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 1. 0. 0. 0.]
+ [0. 1. 0. 1. 2.]
+ [0. 0. 0. 1. 0.]]
+Total Points: 43.0
+
+Image 43:**************** NOT WORKING (Grass tiles too dark) **************
+points_grass: 20.0
+points_woods: 5.0
+points_water: 0.0
+points_desert: 15.0
+points_dirt: 2.0
+points_mine: 2.0
+Crown tiles: 
+ [[1. 0. 0. 1. 1.]
+ [0. 0. 0. 1. 0.]
+ [0. 1. 0. 0. 1.]
+ [2. 0. 1. 0. 0.]
+ [0. 2. 0. 0. 0.]]
+Total Points: 44.0
+
+Image 44:
+points_grass: 4.0
+points_woods: 2.0
+points_water: 14.0
+points_desert: 3.0
+points_dirt: 0.0
+points_mine: 10.0
+Crown tiles: 
+ [[0. 0. 1. 0. 1.]
+ [2. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0.]
+ [2. 0. 0. 1. 0.]
+ [3. 0. 0. 0. 0.]]
+Total Points: 33.0
+NO START TILE FOUND
+
+Image 45: 
+points_grass: 0.0
+points_woods: 4.0
+points_water: 8.0
+points_desert: 0.0
+points_dirt: 24.0
+points_mine: 2.0
+Crown tiles: 
+ [[0. 0. 1. 0. 0.]
+ [0. 0. 0. 2. 1.]
+ [0. 0. 2. 0. 0.]
+ [0. 0. 0. 1. 0.]
+ [0. 1. 0. 1. 0.]]
+Total Points: 38.0
+
+Image 46: **************** NOT WORKING (Couldn't find mine crowns) **************** 
+points_grass: 0
+points_woods: 30.0
+points_water: 6.0
+points_desert: 8.0
+points_dirt: 0.0
+points_mine: 0.0
+Crown tiles: 
+ [[1. 0. 0. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 1. 0. 0. 0.]
+ [0. 1. 0. 1. 0.]
+ [0. 0. 0. 1. 0.]]
+Total Points: 44.0
+NO START TILE FOUND
+
+Image 47:
+points_grass: 44.0
+points_woods: 3.0
+points_water: 0.0
+points_desert: 15.0
+points_dirt: 2.0
+points_mine: 2.0
+Crown tiles: 
+ [[1. 0. 0. 1. 1.]
+ [0. 0. 0. 1. 0.]
+ [0. 1. 0. 0. 1.]
+ [2. 0. 1. 0. 0.]
+ [0. 2. 0. 0. 0.]]
+Total Points: 66.0
+NO START TILE FOUND
+
+Image 48:
+points_grass: 0
+points_woods: 8.0
+points_water: 0.0
+points_desert: 20.0
+points_dirt: 8.0
+points_mine: 6.0
+Crown tiles: 
+ [[0. 2. 0. 0. 0.]
+ [1. 0. 0. 0. 1.]
+ [1. 0. 0. 0. 1.]
+ [0. 1. 2. 0. 0.]
+ [0. 0. 0. 1. 0.]]
+Total Points: 42.0
+
+Image 49:
+points_grass: 6.0
+points_woods: 4.0
+points_water: 12.0
+points_desert: 0.0
+points_dirt: 1.0
+points_mine: 3.0
+Crown tiles: 
+ [[0. 0. 1. 0. 0.]
+ [0. 0. 3. 0. 0.]
+ [1. 0. 0. 0. 0.]
+ [2. 0. 0. 1. 1.]
+ [0. 0. 1. 0. 0.]]
+Total Points: 26.0
+
+Image 50:
+points_grass: 0.0
+points_woods: 14.0
+points_water: 6.0
+points_desert: 10.0
+points_dirt: 0.0
+points_mine: 4.0
+Crown tiles: 
+ [[0. 0. 1. 0. 0.]
+ [0. 1. 0. 1. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 1. 0. 1. 0.]
+ [0. 0. 0. 0. 2.]]
+Total Points: 34.0
+
+Image 51: ****************** NOT WORKING (Grass too dark) ******************
+points_grass: 4.0
+points_woods: 6.0
+points_water: 4.0
+points_desert: 5.0
+points_dirt: 2.0
+points_mine: 2.0
+Crown tiles: 
+ [[1. 0. 1. 1. 0.]
+ [0. 1. 0. 2. 0.]
+ [0. 0. 0. 0. 1.]
+ [0. 2. 0. 0. 0.]
+ [1. 0. 2. 0. 0.]]
+Total Points: 23.0
+
+Image 52: ***************** NOT WORKING (Start tile detected as mine) ***************** 
+points_grass: 0
+points_woods: 8.0
+points_water: 0.0
+points_desert: 20.0
+points_dirt: 7.0
+points_mine: 9.0
+Crown tiles: 
+ [[0. 2. 0. 0. 0.]
+ [1. 0. 0. 0. 1.]
+ [1. 0. 0. 0. 1.]
+ [0. 1. 2. 0. 0.]
+ [0. 0. 0. 1. 0.]]
+Total Points: 44.0
+NO START TILE FOUND
+
+Image 53: ****************** NOT WORKING (Tiles not detected) ********************
+points_grass: 0.0
+points_woods: 2.0
+points_water: 12.0
+points_desert: 0.0
+points_dirt: 1.0
+points_mine: 0
+Crown tiles: 
+ [[0. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0.]
+ [2. 0. 0. 1. 1.]
+ [0. 0. 1. 0. 0.]]
+Total Points: 15.0
+
+Image 54: ****************** NOT WORKING (Tiles not detected) ********************
+points_grass: 0.0
+points_woods: 4.0
+points_water: 6.0
+points_desert: 10.0
+points_dirt: 0.0
+points_mine: 4.0
+Crown tiles: 
+ [[0. 0. 1. 0. 0.]
+ [0. 1. 0. 1. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 1. 0. 1. 0.]
+ [0. 0. 0. 0. 2.]]
+Total Points: 24.0
+NO START TILE FOUND
+
+Image 55:
+points_grass: 20.0
+points_woods: 4.0
+points_water: 4.0
+points_desert: 5.0
+points_dirt: 2.0
+points_mine: 2.0
+Crown tiles: 
+ [[1. 0. 1. 1. 0.]
+ [0. 1. 0. 2. 0.]
+ [0. 0. 0. 0. 1.]
+ [0. 2. 0. 0. 0.]
+ [1. 0. 2. 0. 0.]]
+Total Points: 37.0
+NO START TILE FOUND
+
+Image 56: ****************** NOT WORKING (Tiles not detected) ********************
+points_grass: 0
+points_woods: 2.0
+points_water: 24.0
+points_desert: 0.0
+points_dirt: 0.0
+points_mine: 3.0
+Crown tiles: 
+ [[2. 0. 1. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 0. 2. 0. 1.]
+ [2. 0. 0. 1. 0.]
+ [0. 0. 0. 0. 1.]]
+Total Points: 29.0
+NO START TILE FOUND
+
+Image 57: ****************** NOT WORKING (Tiles not detected) ********************
+points_grass: 48.0
+points_woods: 0.0
+points_water: 0.0
+points_desert: 8.0
+points_dirt: 6.0
+points_mine: 0
+Crown tiles: 
+ [[0. 1. 0. 0. 0.]
+ [0. 0. 2. 0. 0.]
+ [0. 0. 0. 1. 0.]
+ [0. 1. 0. 0. 1.]
+ [0. 2. 2. 0. 0.]]
+Total Points: 62.0
+
+Image 58: ****************** NOT WORKING (Tiles not detected) ********************
+points_grass: 4.0
+points_woods: 0.0
+points_water: 0.0
+points_desert: 9.0
+points_dirt: 2.0
+points_mine: 9.0
+Crown tiles: 
+ [[0. 0. 1. 0. 0.]
+ [1. 2. 0. 0. 1.]
+ [0. 1. 0. 0. 0.]
+ [0. 0. 0. 0. 1.]
+ [1. 1. 0. 0. 0.]]
+Total Points: 24.0
+NO START TILE FOUND
+
+Image 59: ****************** NOT WORKING (Tiles not detected) ********************
+points_grass: 0
+points_woods: 0.0
+points_water: 11.0
+points_desert: 16.0
+points_dirt: 0.0
+points_mine: 0
+Crown tiles: 
+ [[3. 0. 0. 0. 0.]
+ [1. 0. 1. 0. 1.]
+ [0. 0. 0. 1. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 1.]]
+Total Points: 27.0
+
+Image 60: ****************** NOT WORKING (Tiles not detected) ********************
+points_grass: 0
+points_woods: 2.0
+points_water: 24.0
+points_desert: 0.0
+points_dirt: 0.0
+points_mine: 5.0
+Crown tiles: 
+ [[2. 0. 1. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 0. 2. 0. 1.]
+ [2. 0. 0. 1. 0.]
+ [0. 0. 0. 0. 1.]]
+Total Points: 31.0
+NO START TILE FOUND
+
+Image 61: ****************** NOT WORKING (Tiles not detected) ********************
+points_grass: 48.0
+points_woods: 0.0
+points_water: 2.0
+points_desert: 8.0
+points_dirt: 6.0
+points_mine: 0.0
+Crown tiles: 
+ [[0. 1. 0. 0. 0.]
+ [0. 0. 2. 0. 0.]
+ [0. 0. 0. 1. 0.]
+ [0. 1. 0. 0. 1.]
+ [0. 2. 2. 0. 1.]]
+Total Points: 64.0
+NO START TILE FOUND
+
+Image 62: ****************** NOT WORKING (Tiles not detected) ********************
+points_grass: 4.0
+points_woods: 0.0
+points_water: 0.0
+points_desert: 9.0
+points_dirt: 2.0
+points_mine: 9.0
+Crown tiles: 
+ [[0. 0. 1. 0. 0.]
+ [1. 2. 0. 0. 1.]
+ [0. 1. 0. 0. 0.]
+ [0. 0. 0. 0. 1.]
+ [1. 1. 0. 0. 0.]]
+Total Points: 24.0
+NO START TILE FOUND
+
+Image 63: ****************** NOT WORKING (Tiles not detected) ********************
+points_grass: 0
+points_woods: 0.0
+points_water: 11.0
+points_desert: 16.0
+points_dirt: 0.0
+points_mine: 0
+Crown tiles: 
+ [[3. 0. 0. 0. 0.]
+ [1. 0. 1. 0. 1.]
+ [0. 0. 0. 1. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 1.]]
+Total Points: 27.0
+NO START TILE FOUND
+
+Image 64:
+points_grass: 0
+points_woods: 56.0
+points_water: 0
+points_desert: 10.0
+points_dirt: 0
+points_mine: 0
+Crown tiles: 
+ [[0. 1. 1. 1. 0.]
+ [0. 0. 0. 0. 1.]
+ [1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+Total Points: 66.0
+
+Image 65:
+points_grass: 72.0
+points_woods: 2.0
+points_water: 0.0
+points_desert: 6.0
+points_dirt: 0.0
+points_mine: 0
+Crown tiles: 
+ [[0. 0. 0. 0. 0.]
+ [1. 0. 0. 1. 0.]
+ [0. 0. 2. 0. 0.]
+ [0. 1. 1. 0. 0.]
+ [0. 2. 0. 0. 0.]]
+Total Points: 80.0
+
+Image 66:
+points_grass: 0.0
+points_woods: 0
+points_water: 0
+points_desert: 10.0
+points_dirt: 54.0
+points_mine: 60.0
+Crown tiles: 
+ [[1. 0. 0. 0. 1.]
+ [0. 1. 3. 2. 0.]
+ [0. 2. 2. 2. 0.]
+ [1. 0. 0. 1. 0.]
+ [0. 0. 2. 0. 0.]]
+Total Points: 124.0
+NO START TILE FOUND
+
+Image 67: ****************** NOT WORKING (Tile not detected) ********************
+points_grass: 0
+points_woods: 0.0
+points_water: 90.0
+points_desert: 3.0
+points_dirt: 0
+points_mine: 0
+Crown tiles: 
+ [[0. 0. 0. 0. 0.]
+ [1. 0. 0. 1. 0.]
+ [1. 0. 1. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 1. 0. 1. 1.]]
+Total Points: 93.0
+
+Image 68: ****************** NOT WORKING (Tiles in each other) ********************
+points_grass: 0
+points_woods: 36.0
+points_water: 0
+points_desert: 10.0
+points_dirt: 0
+points_mine: 5.0
+Crown tiles: 
+ [[0. 1. 1. 1. 0.]
+ [0. 0. 0. 0. 1.]
+ [1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+Total Points: 51.0
+NO START TILE FOUND
+
+Image 69: ****************** NOT WORKING (Tile not detected) ********************
+points_grass: 0.0
+points_woods: 0
+points_water: 0
+points_desert: 10.0
+points_dirt: 24.0
+points_mine: 60.0
+Crown tiles: 
+ [[1. 0. 0. 0. 1.]
+ [0. 1. 3. 2. 0.]
+ [0. 2. 2. 2. 0.]
+ [1. 0. 0. 1. 0.]
+ [0. 0. 2. 0. 0.]]
+Total Points: 94.0
+NO START TILE FOUND
+
+Image 70: ****************** NOT WORKING (Tile not detected) ********************
+points_grass: 0
+points_woods: 0.0
+points_water: 90.0
+points_desert: 3.0
+points_dirt: 0
+points_mine: 0.0
+Crown tiles: 
+ [[0. 0. 0. 0. 0.]
+ [1. 0. 0. 1. 0.]
+ [1. 0. 1. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 1. 0. 1. 1.]]
+Total Points: 93.0
+NO START TILE FOUND
+
+Image 71: ****************** NOT WORKING (Tiles in each other) ********************
+points_grass: 0
+points_woods: 22.0
+points_water: 0
+points_desert: 10.0
+points_dirt: 0
+points_mine: 4.0
+Crown tiles: 
+ [[0. 1. 0. 0. 0.]
+ [0. 0. 0. 0. 1.]
+ [1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+Total Points: 36.0
+NO START TILE FOUND
+
+Image 72: ****************** NOT WORKING (Tile not detected) ********************
+points_grass: 72.0
+points_woods: 0.0
+points_water: 0.0
+points_desert: 6.0
+points_dirt: 0.0
+points_mine: 0
+Crown tiles: 
+ [[0. 0. 0. 0. 0.]
+ [1. 0. 0. 1. 0.]
+ [0. 0. 2. 0. 0.]
+ [0. 1. 1. 0. 0.]
+ [0. 2. 0. 0. 0.]]
+Total Points: 78.0
+NO START TILE FOUND
+
+Image 73: ****************** NOT WORKING (Tiles not detected) ********************
+points_grass: 0.0
+points_woods: 0
+points_water: 0
+points_desert: 10.0
+points_dirt: 24.0
+points_mine: 19.0
+Crown tiles: 
+ [[1. 0. 0. 0. 1.]
+ [0. 1. 3. 2. 0.]
+ [0. 2. 2. 2. 0.]
+ [1. 0. 0. 1. 0.]
+ [0. 0. 2. 0. 0.]]
+Total Points: 53.0
+NO START TILE FOUND
+
+Image 73: ****************** NOT WORKING (Tile not detected and incorrect crown detected) ********************
+points_grass: 0
+points_woods: 0.0
+points_water: 105.0
+points_desert: 3.0
+points_dirt: 0
+points_mine: 0
+Crown tiles: 
+ [[0. 0. 0. 0. 0.]
+ [1. 0. 1. 1. 0.]
+ [1. 0. 1. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 1. 0. 1. 1.]]
+Total Points: 108.0
+NO START TILE FOUND
