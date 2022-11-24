@@ -38,12 +38,12 @@ def connected_terrains(crown_tile, connected_grass, connected_woods, connected_w
     points_dirt = count_points(connected_dirt)
     points_mine = count_points(connected_mine)
 
-    print(f"points_grass: {points_grass}")
-    print(f"points_woods: {points_woods}")
-    print(f"points_water: {points_water}")
-    print(f"points_desert: {points_desert}")
-    print(f"points_dirt: {points_dirt}")
-    print(f"points_mine: {points_mine}")
+    print(f"Grass Points: {points_grass}")
+    print(f"Woods Points: {points_woods}")
+    print(f"Water Points: {points_water}")
+    print(f"Desert Points: {points_desert}")
+    print(f"Dirt Points: {points_dirt}")
+    print(f"Mine Points: {points_mine}")
 
     total_points = points_grass + points_woods + points_water + points_desert + points_dirt + points_mine
 
