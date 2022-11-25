@@ -33,7 +33,7 @@ if len(crown_boxes) != 0:
     crown_coordinates_image, crown_box_image = Non_Max_Suppression.draw_box_coordinates(image, crown_coordinates)
 
     # Converts the crown coordinates to a 5x5 numpy array
-    crown_tile_matrix = Crown_Tile.find_crown_tile(crown_coordinates, image.shape[0], image.shape[1])
+    crown_tile_matrix = Crown_Tile.find_crown_tile(image, crown_coordinates)
 
 # Creating a default 5x5 numpy array if no crowns were found
 else:
@@ -76,7 +76,7 @@ if len(start_tile_boxes) != 0:
         Non_Max_Suppression.draw_box_coordinates(image, start_tile_box_center_coordinates)
 
     # Converts the start_tile coordinates to a 5x5 numpy array
-    start_tile_matrix = Crown_Tile.find_crown_tile(start_tile_box_center_coordinates, image.shape[0], image.shape[1])
+    start_tile_matrix = Crown_Tile.find_crown_tile(image, start_tile_box_center_coordinates)
 
     # Removes the start tile from the thresh images
     thresh_grass, thresh_woods, thresh_water, thresh_desert, thresh_dirt, thresh_mine = \
