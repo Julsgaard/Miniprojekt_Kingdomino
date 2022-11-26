@@ -1,6 +1,6 @@
 import cv2 as cv
 import numpy as np
-from Labraries import Non_Max_Suppression, Average_Tile_Color, Find_Crowns, Tile_Threshold, Connect_Tiles, Crown_Tile, \
+from Libraries import Non_Max_Suppression, Average_Tile_Color, Find_Crowns, Tile_Threshold, Connect_Tiles, Crown_Tile, \
     Count_Points, Remove_Start_Tile, Output_Image
 
 
@@ -16,10 +16,10 @@ image = cv.imread(f"King Domino dataset/Cropped and perspective corrected boards
 # -------------------------------------------- Finding the crowns positions --------------------------------------------
 
 # Loading all crown templates from folder
-templates = Find_Crowns.load_images_from_folder("Templates")
+crown_templates = Find_Crowns.load_images_from_folder("Templates")
 
 # Template matching and making bounding boxes around the crowns
-crown_boxes = Find_Crowns.template_matching(image, templates)
+crown_boxes = Find_Crowns.template_matching(image, crown_templates)
 
 # Runs the code if crowns have been found
 if len(crown_boxes) != 0:
@@ -86,10 +86,6 @@ if len(start_tile_boxes) != 0:
 
 # --------------------------------- Creating output image and calculating total points ---------------------------------
 
-# Making an output image of all the tiles
-output_image = Output_Image.output_image(thresh_grass, thresh_woods, thresh_water, thresh_desert, thresh_dirt,
-                                         thresh_mine)
-
 # Running connect components for every threshold to find out if they are connected
 connected_grass, connected_woods, connected_water, connected_desert, connected_dirt, connected_mine = \
     Connect_Tiles.connect_tile(thresh_grass, thresh_woods, thresh_water, thresh_desert, thresh_dirt, thresh_mine)
@@ -105,6 +101,9 @@ if len(crown_boxes) != 0:
 else:
     total_points = 0
 
+# Making an output image of all the tiles
+output_image = Output_Image.output_image(thresh_grass, thresh_woods, thresh_water, thresh_desert, thresh_dirt,
+                                         thresh_mine)
 
 # ----------------------------------------------- Print and imshow data -----------------------------------------------
 

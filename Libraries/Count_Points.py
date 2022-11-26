@@ -16,14 +16,17 @@ def connected_terrains(crown_tile, connected_grass, connected_woods, connected_w
             tile_position_x = []
             tile_position_y = []
             crowns = 0
+
             for y in range(len(connected_terrain_type[:, 0])):
                 for x in range(len(connected_terrain_type[0, :])):
                     if connected_terrain_type[y, x] == i + 1:
                         connected_tiles_amount += 1
                         tile_position_y.append(y)
                         tile_position_x.append(x)
+
             for i in range(connected_tiles_amount):
                 crowns += crown_tile[tile_position_y[i], tile_position_x[i]]
+
             points += connected_tiles_amount * crowns
 
         # print(f"tile_position_y: {tile_position_y}")
@@ -31,6 +34,7 @@ def connected_terrains(crown_tile, connected_grass, connected_woods, connected_w
         # print(f"crowns: {crowns}")
 
         return points
+
     points_grass = count_points(connected_grass)
     points_woods = count_points(connected_woods)
     points_water = count_points(connected_water)
