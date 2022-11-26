@@ -3,7 +3,7 @@ import numpy as np
 
 def connected_terrains(crown_tile, connected_grass, connected_woods, connected_water,
                        connected_desert, connected_dirt, connected_mine):
-    def count_points(connected_terrain_type):
+    def calculate_points(connected_terrain_type):
         figures_amount = np.max(connected_terrain_type)
 
         if figures_amount == 0:
@@ -35,12 +35,12 @@ def connected_terrains(crown_tile, connected_grass, connected_woods, connected_w
 
         return points
 
-    points_grass = count_points(connected_grass)
-    points_woods = count_points(connected_woods)
-    points_water = count_points(connected_water)
-    points_desert = count_points(connected_desert)
-    points_dirt = count_points(connected_dirt)
-    points_mine = count_points(connected_mine)
+    points_grass = calculate_points(connected_grass)
+    points_woods = calculate_points(connected_woods)
+    points_water = calculate_points(connected_water)
+    points_desert = calculate_points(connected_desert)
+    points_dirt = calculate_points(connected_dirt)
+    points_mine = calculate_points(connected_mine)
 
     print(f"Grass Points: {points_grass}")
     print(f"Woods Points: {points_woods}")

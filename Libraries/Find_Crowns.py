@@ -3,15 +3,18 @@ import cv2 as cv
 import os
 
 
+# Loads images from a folder and assigns them to the list templates
 def load_images_from_folder(folder):
+    # Creating the list
     templates = []
+    # Goes through all files in the folder
     for filename in os.listdir(folder):
         img = cv.imread(os.path.join(folder, filename))
         if img is not None:
             templates.append(img)
     return templates
 
-
+# Used for template matching
 def template_matching(image, templates):
     constant_list = []
 

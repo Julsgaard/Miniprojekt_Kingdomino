@@ -1,12 +1,13 @@
 import numpy as np
 
+
 def output_image(thresh_grass, thresh_woods, thresh_water, thresh_desert, thresh_dirt, thresh_mine):
     h, w, = thresh_desert.shape
     output = np.zeros((h, w, 3), dtype=np.uint8)
 
     for x in range(len(thresh_desert)):
         for y in range(len(thresh_desert[x])):
-            #Makes all tiles white
+            # Makes all tiles white
             output[x, y, 0] = 255
             output[x, y, 1] = 255
             output[x, y, 2] = 255
